@@ -69,11 +69,10 @@ const CustomerOrders = () => {
     async function fetchData() {
       try {
         const res = await axios.get(`https://erytyu.onrender.com/invoice`);
-        // res.data.sort(compare);
-        const result = res.data.filter((_, index) => index <= 1);
-        setInvoice(res.data);
+        res.data.sort(compare)
+        const result = res.data.filter((_, index) => index < 1);
+        setInvoice(result);
         setInvoice1(result[0].address);
-        console.log("results", result[0].address);
       } catch (error) {
         console.log(error);
       }
@@ -291,7 +290,7 @@ const CustomerOrders = () => {
 
     if (cameraAllowed === true) {
       console.log("updated data", form);
-      // dispatch(createProject({ ...form, toast }));
+      dispatch(createProject({ ...form, toast }));
       setpics(false);
       sethomebase(true);
     } else {
