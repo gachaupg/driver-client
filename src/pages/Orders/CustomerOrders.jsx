@@ -290,7 +290,7 @@ const CustomerOrders = () => {
 
     if (cameraAllowed === true) {
       console.log("updated data", form);
-      dispatch(createProject({ ...form, toast }));
+      // dispatch(createProject({ ...form, toast }));
       setpics(false);
       sethomebase(true);
     } else {

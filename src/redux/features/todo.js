@@ -60,12 +60,12 @@ export const updateReview = createAsyncThunk(
   "todos/updateTodo",
   async (todo, { rejectWithValue }) => {
     try {
-      const { _id, task, author, isComplete, date, uid } = todo;
+      const { _id, task, author,feedaback, isComplete, date, uid } = todo;
 
       const response = await axios.put(baseURL + "review/" + _id, {
         task,
         author,
-
+        feedaback,
         isComplete,
         date,
         uid,

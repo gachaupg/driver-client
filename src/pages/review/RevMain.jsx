@@ -6,6 +6,7 @@ import ListTodos from "./ReviewsAdd";
 const App = () => {
   const [todo, setTodo] = useState({
     task: "",
+    feedback:'',
     isComplete: false,
    
   });
