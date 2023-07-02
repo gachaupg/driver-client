@@ -8,6 +8,7 @@ import { login, register } from "../../redux/features/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
+
 function MultiStepForm() {
   const [step, setStep] = useState(1);
   const { user, loading } = useSelector((state) => ({ ...state.auth }));
